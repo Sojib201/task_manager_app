@@ -63,44 +63,46 @@ class _taskCreateScreenState extends State<taskCreateScreen> {
                   ))
                 : (Container(
                     padding: EdgeInsets.all(30),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Add New Task",
-                          style: Head1Text(colorDarkBlue),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        TextFormField(
-                          onChanged: (TextValue) {
-                            InputOnChange("title", TextValue);
-                          },
-                          decoration: AppInputDeceration("Task Name"),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        TextFormField(
-                          onChanged: (TextValue) {
-                            InputOnChange("description", TextValue);
-                          },
-                          maxLines: 8,
-                          decoration: AppInputDeceration("Description"),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        ElevatedButton(
-                          onPressed: () {
-                            FormOnSubmit();
-                          },
-                          child: SuccessButtonChild("Create"),
-                          style: AppButtonStyle(),
-                        ),
-                      ],
+                    child: SingleChildScrollView(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Add New Task",
+                            style: Head1Text(colorDarkBlue),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextFormField(
+                            onChanged: (TextValue) {
+                              InputOnChange("title", TextValue);
+                            },
+                            decoration: AppInputDeceration("Task Name"),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          TextFormField(
+                            onChanged: (TextValue) {
+                              InputOnChange("description", TextValue);
+                            },
+                            maxLines: 8,
+                            decoration: AppInputDeceration("Description"),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              FormOnSubmit();
+                            },
+                            child: SuccessButtonChild("Create"),
+                            style: AppButtonStyle(),
+                          ),
+                        ],
+                      ),
                     ),
                   )),
           ),
