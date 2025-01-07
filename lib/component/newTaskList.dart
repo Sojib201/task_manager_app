@@ -47,6 +47,9 @@ class _newTaskListState extends State<newTaskList> {
                     });
                     await TaskDeleteRequest(id);
                     await CallData();
+                    // setState(() {
+                    //   Loading = false; // Hide loading indicator
+                    // });
                   },
                   child: Text('Yes')),
               OutlinedButton(
